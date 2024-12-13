@@ -12,12 +12,15 @@ This project performs topic modeling on research papers to analyze trends in mac
    ```bash
    git clone https://gitlab.kit.edu/mnawale/trend_analysis.git
 2. Navigate to the project directory:
+    ```bash
     cd trend_analysis
 3. Create and activate a virtual environment:
+    ```bash
     python -m venv trend_env
     trend_env\Scripts\activate  # On Windows
     source trend_env/bin/activate  # On macOS/Linux
 4. Install the required dependencies:
+    ```bash
     pip install -r requirements.txt
 
 ## Dataset
