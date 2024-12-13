@@ -28,16 +28,28 @@ def preprocess_text(text):
     return ' '.join(tokens)
 
 def main():
+    # Dynamically resolve the base directory
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    data_path = os.path.join(BASE_DIR, 'data', '19th_CIRP_Conference_Papers.xlsx')
+    output_dir = os.path.join(BASE_DIR, 'data')
+
+    # Debug the file path
+    print(f"Looking for the file at: {data_path}")
+    if not os.path.exists(data_path):
+        raise FileNotFoundError(f"The dataset file was not found at {data_path}. Please ensure it exists.")
+    
     # Load the dataset
-    data_path = os.path.join('..', 'data', '19th_CIRP_Conference_Papers.xlsx')
     df = pd.read_excel(data_path)
 
     # Preprocess Titles and Abstracts
     df['Processed_Title'] = df['Title'].apply(preprocess_text)
     df['Processed_Abstract'] = df['Abstract'].apply(preprocess_text)
 
+    # Ensure the output directory exists
+    os.makedirs(output_dir, exist_ok=True)
+
     # Save the preprocessed data
-    output_path = os.path.join('..', 'data', 'preprocessed_data.xlsx')
+    output_path = os.path.join(output_dir, 'preprocessed_data.xlsx')
     df.to_excel(output_path, index=False)
     print(f"Preprocessed data saved to {output_path}")
 
