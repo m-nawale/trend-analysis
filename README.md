@@ -90,14 +90,7 @@ This project performs topic modeling on research papers to analyze trends in mac
     └── main.py                    # Main script to run the project
 
 ## How to Run
-1. Preprocess the dataset:
-    python src/preprocessing.py
-2. Extract topics using LDA:
-    python src/topic_modeling.py
-3. Visualize the topics:
-    python src/visualization.py
-4. Open the visualization in a browser:
-    data/lda_visualization.html
+    python main.py
 
 ## Contact
     For questions or feedback, reach out at:
