@@ -1,0 +1,11 @@
+# Ignore Python virtual environment
+trend_env/
+venv/
+
+# Ignore temporary files
+*.log
+*.tmp
+
+# Ignore data and output files
+data/
+output/
