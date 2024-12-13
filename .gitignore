@@ -2,10 +2,33 @@
 trend_env/
 venv/
 
+# Ignore Python cache files
+*.pyc
+__pycache__/
+
 # Ignore temporary files
 *.log
 *.tmp
 
-# Ignore data and output files
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore system-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore intermediate or large data files
 data/
+
+# Allow specific essential files in the data folder
+!data/19th_CIRP_Conference_Papers.xlsx
+!data/preprocessed_data.xlsx
+!data/lda_visualization.html
+
+# Ignore output directories or temporary outputs
 output/
+
+# Include README.md and requirements.txt explicitly
+!.gitignore
+!README.md
+!requirements.txt
