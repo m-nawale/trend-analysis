@@ -11,7 +11,7 @@ This project performs topic modeling on research papers to analyze trends in mac
 1. Clone this repository:
    ```bash
    git clone https://gitlab.kit.edu/mnawale/trend_analysis.git
-2. Navigate to the project directory:
+2. Navigate to the project directory if not already in it:
     ```bash
     cd trend_analysis
 3. Create and activate a virtual environment:
