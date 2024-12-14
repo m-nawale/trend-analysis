@@ -1,3 +1,10 @@
+import nltk
+
+nltk.download("punkt")
+nltk.download("stopwords")
+nltk.download("wordnet")
+nltk.download("punkt_tab")
+
 from src.preprocessing import main as preprocess_main
 from src.topic_modeling import main as topic_modeling_main
 from src.visualization import main as visualization_main
