@@ -92,6 +92,10 @@ This project performs topic modeling on research papers to analyze trends in mac
 ## How to Run
     python main.py
 
+## Where to see results
+    File generated inside data directory, open this file in your browser.
+    lda_visualization.html 
+
 ## Contact
     For questions or feedback, reach out at:
 
